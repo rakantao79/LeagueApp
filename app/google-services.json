@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1093511084425",
+    "firebase_url": "https://leagueapp-fb4ef.firebaseio.com",
+    "project_id": "leagueapp-fb4ef",
+    "storage_bucket": "leagueapp-fb4ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093511084425:android:5790aed166a7242c",
+        "android_client_info": {
+          "package_name": "com.app.league.goldenboys.leagueapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093511084425-uc66463elaihhkc715adoo8b0mok3p1l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.league.goldenboys.leagueapp",
+            "certificate_hash": "4873e62c2f908a0a04400ec2326ddb4b3a278a5a"
+          }
+        },
+        {
+          "client_id": "1093511084425-jm1fopdhqn91g3aelohsnhjjk2lkljc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbSoF-FXrT6XKjJou0F6atiR2ZJKseXqY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093511084425-jm1fopdhqn91g3aelohsnhjjk2lkljc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
