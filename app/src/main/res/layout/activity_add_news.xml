@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
     tools:context=".Admin.Activities.AddNewsActivity">
 
     <include layout="@layout/toolbar_transparent" android:id="@+id/toolbar_addnews"/>
@@ -24,6 +25,7 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:textColor="@color/primaryTextColor"
             android:layout_marginTop="10dp"
             android:text="Add News Feed"
             android:textAlignment="center"
@@ -39,6 +41,8 @@
 
             <android.support.design.widget.TextInputEditText
                 android:hint="Title"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
                 android:id="@+id/etNewsTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -51,6 +55,8 @@
 
             <android.support.design.widget.TextInputEditText
                 android:hint="Content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
                 android:id="@+id/etNewsContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

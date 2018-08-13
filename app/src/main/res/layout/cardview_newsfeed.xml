@@ -2,11 +2,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/colorPrimaryDark"
-    app:cardPreventCornerOverlap="true"
-    app:cardUseCompatPadding="true"
-    app:cardCornerRadius="5dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -25,27 +21,31 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/tvNewsFeedTitle"
                 android:text="Title"
+
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/tvNewsFeedContent"
                 android:text="Content"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
             <TextView
+                android:id="@+id/tvNewsFeedAuthor"
                 android:text="Author"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
             <TextView
+                android:id="@+id/tvNewsFeedDate"
                 android:text="Publish Date"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
-
     </LinearLayout>
-
 </android.support.v7.widget.CardView>

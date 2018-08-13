@@ -37,6 +37,7 @@ public class AddNewsActivity extends AppCompatActivity implements View.OnClickLi
 
     private DatabaseReference mDatabase;
     private DatabaseReference mCountDatabase;
+    private FirebaseAuth mAuth;
 
     private String pushKey;
     private String uid;
@@ -49,6 +50,7 @@ public class AddNewsActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_news);
 
+        mAuth = FirebaseAuth.getInstance();
 
         mToolbar = findViewById(R.id.toolbar_addnews);
         setSupportActionBar(mToolbar);
@@ -62,6 +64,8 @@ public class AddNewsActivity extends AppCompatActivity implements View.OnClickLi
         etNewsContent = findViewById(R.id.etNewsContent);
         btnAddNews = findViewById(R.id.btnAddNewsFeed);
         btnAddNewsCancel = findViewById(R.id.btnAddNewsCancel);
+
+        btnAddNews.setOnClickListener(this);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("NewsFeed").push();
         mCountDatabase = FirebaseDatabase.getInstance().getReference().child("NewsFeed");
@@ -81,7 +85,6 @@ public class AddNewsActivity extends AppCompatActivity implements View.OnClickLi
 
             }
         });
-
     }
 
     @Override
@@ -121,7 +124,7 @@ public class AddNewsActivity extends AppCompatActivity implements View.OnClickLi
 
             putMap.put("title", title);
             putMap.put("content", content );
-            putMap.put("pushhey", pushKey);
+            putMap.put("pushkey", pushKey);
             putMap.put("datePosted", date);
             putMap.put("user_id", uid);
             putMap.put("counter", countpost);
