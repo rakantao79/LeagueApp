@@ -29,7 +29,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView tvNoAccount;
     private Button btnLogin;
@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         tvNoAccount = findViewById(R.id.tvNoAccount);
         btnLogin = findViewById(R.id.btnLogin);
 
-        mProgressBar= findViewById(R.id.progressBarLogin);
+        mProgressBar = findViewById(R.id.progressBarLogin);
         mProgressBar.setVisibility(View.INVISIBLE);
 
         mAuth = FirebaseAuth.getInstance();
@@ -84,13 +84,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.tvNoAccount:
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
                 finish();
                 break;
 
-            case R.id.btnLogin :
+            case R.id.btnLogin:
                 //startActivity(new Intent(LoginActivity.this, NavigationActivity.class));
                 login();
                 break;
@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
     }
 
-    private void touchable(){
+    private void touchable() {
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
     }
 
@@ -113,7 +113,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String email = etLoginEmail.getText().toString().trim();
         String password = etLoginPassword.getText().toString().trim();
 
-        if (TextUtils.isEmpty(email) ||  TextUtils.isEmpty(password)){
+        if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
             touchable();
             mProgressBar.setVisibility(View.INVISIBLE);
             Toast.makeText(LoginActivity.this, "Please Enter Login Details", Toast.LENGTH_SHORT).show();
@@ -121,37 +121,39 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    FirebaseUser mCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
-                    String current_uid = mCurrentUser.getUid();
-                    mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(current_uid);
 
-                    mDatabase.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            if (dataSnapshot.exists()){
-                                Usertype = dataSnapshot.child("Usertype").getValue().toString();
-                                touchable();
-                                mProgressBar.setVisibility(View.INVISIBLE);
-                                Toast.makeText(LoginActivity.this, "Succesfully Login as " + Usertype, Toast.LENGTH_SHORT).show();
+                    if (task.isSuccessful()) {
+                        FirebaseUser mCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
+                        String current_uid = mCurrentUser.getUid();
+                        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(current_uid);
 
-                                Intent intent = new Intent(LoginActivity.this, NavigationActivity.class);
-                                intent.putExtra("Usertype", Usertype);
-                                Log.d("usertype ", "onDataChange: " + Usertype);
-                                startActivity(intent);
+                        mDatabase.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                if (dataSnapshot.exists()) {
+                                    Usertype = dataSnapshot.child("Usertype").getValue().toString();
+                                    touchable();
+                                    mProgressBar.setVisibility(View.INVISIBLE);
+                                    Toast.makeText(LoginActivity.this, "Succesfully Login as " + Usertype, Toast.LENGTH_SHORT).show();
+
+                                    Intent intent = new Intent(LoginActivity.this, NavigationActivity.class);
+                                    intent.putExtra("Usertype", Usertype);
+                                    Log.d("usertype ", "onDataChange: " + Usertype);
+                                    startActivity(intent);
+
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
 
                             }
-                        }
-
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-
-                        }
-                    });
-
-//                    Intent intent = new Intent(LoginActivity.this, NavigationActivity.class);
-//                    intent.putExtra("Usertype", Usertype);
-//                    startActivity(intent);
-
+                        });
+                    } else {
+                        touchable();
+                        mProgressBar.setVisibility(View.INVISIBLE);
+                        Toast.makeText(LoginActivity.this, task.getException().toString(), Toast.LENGTH_LONG).show();
+                    }
                 }
             });
         }

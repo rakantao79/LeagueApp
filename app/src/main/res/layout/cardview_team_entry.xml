@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/primaryLightColor"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:padding="3dp"
+            android:src="@drawable/logo_ball_white"
+            android:id="@+id/cimvTeamEntryLogo"
+            android:layout_width="50dp"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="@color/primaryTextColor"
+            android:id="@+id/tvEntryTeamName"
+            android:text="Team Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

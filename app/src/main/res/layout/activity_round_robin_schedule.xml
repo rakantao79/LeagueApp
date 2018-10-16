@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Organizer.Activities.RoundRobinScheduleActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvRBMatchName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match1"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch1OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch1OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch1Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch1Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvRBMatchName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match2"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch2OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch2OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch2Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch2Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch2Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 2 SAVE SCHEDULE" />
+
+            <TextView
+                android:id="@+id/tvRBMatchName3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match3"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch3OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch3OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch3Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch3Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch3Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 3 SAVE SCHEDULE" />
+
+            <TextView
+                android:id="@+id/tvRBMatchName4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match4"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch4OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch4OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch4Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch4Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch4Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 4 SAVE SCHEDULE" />
+
+            <TextView
+                android:id="@+id/tvRBMatchName5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match5"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch5OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch5OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch5Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch5Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch5Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 5 SAVE SCHEDULE" />
+
+            <TextView
+                android:id="@+id/tvRBMatchName6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match6"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch6OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch6OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch6Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch6Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch6Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 6 SAVE SCHEDULE" />
+
+            <TextView
+                android:id="@+id/tvRBMatchName7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match7"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch7OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch7OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch7Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch7Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch7Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 7 SAVE SCHEDULE" />
+
+            <TextView
+                android:id="@+id/tvRBMatchName8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match8"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch8OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch8OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch8Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch8Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch8Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 8 SAVE SCHEDULE" />
+
+            <TextView
+                android:id="@+id/tvRBMatchName9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match9"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch9OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch9OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch9Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch9Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch9Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 9 SAVE SCHEDULE" />
+
+            <TextView
+                android:id="@+id/tvRBMatchName10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match10"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch10OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch10OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch10Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch10Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch10SAve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 10 SAVE SCHEDULE" />
+
+            <!-- match limit -->
+
+            <TextView
+                android:id="@+id/tvRBMatchName11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match11"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch11OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch11OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch11Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch11Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch11SAve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 11 SAVE SCHEDULE" />
+
+            <!-- match limit -->
+
+
+            <TextView
+                android:id="@+id/tvRBMatchName12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match12"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch12OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch12OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch12Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch12Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch12SAve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 12 SAVE SCHEDULE" />
+
+            <!-- match limit -->
+            <TextView
+                android:id="@+id/tvRBMatchName13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match13"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRBMatch13OpponentA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="vs"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvRBMatch13OpponentB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="teamA"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:text="Sched" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch13Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/tvRBMatch13Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Time"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRBMatch1Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SAVE SCHEDULE" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnMatch13SAve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATCH 13 SAVE SCHEDULE" />
+            <!-- match limit -->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

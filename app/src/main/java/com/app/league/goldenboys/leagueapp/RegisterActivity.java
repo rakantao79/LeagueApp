@@ -56,6 +56,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText etPassword;
     private Button btnRegisterUser;
     private EditText etAge;
+    private int currentYear;
 
     private ProgressBar mProgressBar;
 
@@ -69,6 +70,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+
         mToolbar = findViewById(R.id.toolbar_register);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("");
@@ -76,8 +78,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         changeStatusBarColor();
 
+        currentYear = Calendar.getInstance().get(Calendar.YEAR);
+
         mAuth = FirebaseAuth.getInstance();
-        mProgressBar= findViewById(R.id.progressBar);
+        mProgressBar = findViewById(R.id.progressBar);
         mProgressBar.setVisibility(View.INVISIBLE);
 
         tvHaveAccount = findViewById(R.id.tvHaveAccount);
@@ -105,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                switch (checkedId){
+                switch (checkedId) {
                     case R.id.rbMale:
                         mGender = "Male";
                         break;
@@ -133,7 +137,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.tvHaveAccount:
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                 finish();
@@ -165,7 +169,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             mProgressBar.setVisibility(View.INVISIBLE);
             Toast.makeText(getApplicationContext(), "Fields must not be empty", Toast.LENGTH_SHORT).show();
 
-        } else if (mGender.isEmpty()){
+        } else if (mGender.isEmpty()) {
             touchable();
             mProgressBar.setVisibility(View.INVISIBLE);
             Toast.makeText(getApplicationContext(), "Select Gender", Toast.LENGTH_SHORT).show();
@@ -178,7 +182,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull final Task<AuthResult> task) {
-                    if (task.isSuccessful()){
+                    if (task.isSuccessful()) {
 
                         DateFormat df = new SimpleDateFormat("yyyy/MM/dd h:mm a");
                         final String date = df.format(Calendar.getInstance().getTime());
@@ -198,6 +202,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         User.put("age", age);
                         User.put("dateRegistered", date);
                         User.put("status", "pending");
+                        User.put("profileImage", "default");
 
                         mDatabase.child("Users").child(user_id).setValue(User).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -211,6 +216,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
                             }
                         });
+
                     } else {
 
                         touchable();
@@ -230,7 +236,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
     }
 
-    private void touchable(){
+    private void touchable() {
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
     }
 
@@ -240,7 +246,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                if (dataSnapshot.exists()){
+                if (dataSnapshot.exists()) {
                     countUsers = dataSnapshot.getChildrenCount();
                     Log.d("count users : ", String.valueOf(countUsers));
                 } else {

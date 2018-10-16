@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Organizer.Activities.RoundRobinMatchDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvRBDetailViewMatchName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Match Name" />
+
+                <TextView
+                    android:id="@+id/tvRBDetailViewMatchSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Match Schedule" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/tvRBDetailViewMatchTeamAName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Team A"
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tvRBDetailViewMatchTeamBName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Team B"
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etRBDetailViewMatchOpponentScoreA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Score"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/etRBDetailViewMatchOpponentScoreB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Score"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Winner: "
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tvRBDetailViewMatchWinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Winner : "
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Losser: "
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tvRBDetailViewMatchLosser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lost"
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnRBUpdateMatchScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_background"
+                    android:text="Update Score"
+                    android:textColor="@color/primaryTextColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Player of the game : "
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tvRBDetailViewMatchPlayerOfTheGame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Player of the game "
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etRBPlayerPoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Points"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/etRBPlayerRebounds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Rebounds"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/etRBPlayerAssist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Assist"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etRBPlayerSteal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Steal"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/etRBPlayerBlock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Block"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btnRBUpdateMatchDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_background"
+                    android:text="Save Match Update"
+                    android:textColor="@color/primaryTextColor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

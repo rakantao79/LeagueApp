@@ -49,7 +49,7 @@ public class TabHostCustomerFragment extends Fragment {
         Adapter adapter = new Adapter(getChildFragmentManager());
         adapter.addFragment(new NewsFeedFragment(), "News Feed");
         adapter.addFragment(new CustomerLeagueFragment(), "Leagues");
-        adapter.addFragment(new NotificationsFragment(), "Notification");
+        adapter.addFragment(new UserNotificationsFragment(), "Notification");
         viewPager.setAdapter(adapter);
     }
 

@@ -52,7 +52,8 @@ public class TabHostOrganizerFragment extends Fragment {
         Adapter adapter = new Adapter(getChildFragmentManager());
         adapter.addFragment(new NewsFeedFragment(), "News Feed");
         adapter.addFragment(new LeaguesFragment(), "Leagues");
-        adapter.addFragment(new NotificationsFragment(), "Notification");
+        adapter.addFragment(new OrganizerNotificationFragment(), "Notifications");
+        //adapter.addFragment(new NotificationsFragment(), "Notification");
         viewPager.setAdapter(adapter);
 
     }
@@ -86,5 +87,4 @@ public class TabHostOrganizerFragment extends Fragment {
             return mFragmentTitleList.get(position);
         }
     }
-
 }

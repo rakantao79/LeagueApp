@@ -21,6 +21,8 @@ import com.app.league.goldenboys.leagueapp.Customer.Fragments.TabHostCustomerFra
 import com.app.league.goldenboys.leagueapp.Fragments.AboutUsFragment;
 import com.app.league.goldenboys.leagueapp.Fragments.ProfileFragment;
 import com.app.league.goldenboys.leagueapp.Organizer.Fragments.TabHostOrganizerFragment;
+import com.app.league.goldenboys.leagueapp.OtherModule.SelectItemsActivity;
+import com.app.league.goldenboys.leagueapp.OtherModule.UploadImageActivity;
 import com.app.league.goldenboys.leagueapp.Receptionist.Fragments.TabHostReceptionistFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -84,22 +86,22 @@ public class NavigationActivity extends AppCompatActivity
         navReservation.setVisible(false);
         navActivityManager.setVisible(false);
 
-        if (usertype.equals("customer")){
+        if (usertype.equals("customer")) {
             Toast.makeText(NavigationActivity.this, "Login as " + usertype, Toast.LENGTH_SHORT).show();
 
             loginAsCustomer();
 
-        } else if(usertype.equals("organizer")){
+        } else if (usertype.equals("organizer")) {
             Toast.makeText(NavigationActivity.this, "Login as " + usertype, Toast.LENGTH_SHORT).show();
 
             loginAsOrganizer();
 
-        } else if(usertype.equals("admin")){
+        } else if (usertype.equals("admin")) {
             Toast.makeText(NavigationActivity.this, "Login as " + usertype, Toast.LENGTH_SHORT).show();
 
             loginAsAdmin();
 
-        } else {
+        } else if (usertype.equals("receptionist")) {
             Toast.makeText(NavigationActivity.this, "Login as " + usertype, Toast.LENGTH_SHORT).show();
 
             loginAsReceptionist();
@@ -116,7 +118,7 @@ public class NavigationActivity extends AppCompatActivity
 
         getSupportActionBar().setTitle("Receptionist");
 
-        navHomeReceptionist.setVisible(false);
+        navHomeReceptionist.setVisible(true);
 
         getSupportFragmentManager()
                 .beginTransaction()
@@ -179,7 +181,7 @@ public class NavigationActivity extends AppCompatActivity
 
         menuAdminAddOrganizer.setVisible(false);
 
-        if (usertype.equals("admin")){
+        if (usertype.equals("admin")) {
             menuAdminAddOrganizer.setVisible(true);
         }
 
@@ -195,10 +197,12 @@ public class NavigationActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            //startActivity(new Intent(NavigationActivity.this, UploadImageActivity.class));
+            startActivity(new Intent(NavigationActivity.this, SelectItemsActivity.class));
             return true;
-        } else if (id == R.id.admin_menu_register_organizer){
+        } else if (id == R.id.admin_menu_register_organizer) {
             startActivity(new Intent(getApplicationContext(), AdminAddOrganizerActivity.class));
-        } else if (id == R.id.action_logout){
+        } else if (id == R.id.action_logout) {
             startActivity(new Intent(NavigationActivity.this, LoginActivity.class));
             mAuth.signOut();
             finish();
@@ -222,7 +226,7 @@ public class NavigationActivity extends AppCompatActivity
                     .replace(R.id.container_main_drawer, new TabHostCustomerFragment())
                     .commit();
 
-        } else if (id == R.id.nav_home_organizer){
+        } else if (id == R.id.nav_home_organizer) {
 
             getSupportActionBar().setTitle("Organizer");
 
@@ -240,7 +244,7 @@ public class NavigationActivity extends AppCompatActivity
                     .replace(R.id.container_main_drawer, new TabHostReceptionistFragment())
                     .commit();
 
-        } else if (id == R.id.nav_home_admin){
+        } else if (id == R.id.nav_home_admin) {
 
             getSupportActionBar().setTitle("Admin");
 
@@ -249,11 +253,11 @@ public class NavigationActivity extends AppCompatActivity
                     .replace(R.id.container_main_drawer, new TabHostAdminFragment())
                     .commit();
 
-        } else if (id == R.id.nav_activitymanager){
+        } else if (id == R.id.nav_activitymanager) {
 
         } else if (id == R.id.nav_reservation) {
 
-        } else if (id == R.id.nav_profile){
+        } else if (id == R.id.nav_profile) {
 
             getSupportActionBar().setTitle("Profile");
 

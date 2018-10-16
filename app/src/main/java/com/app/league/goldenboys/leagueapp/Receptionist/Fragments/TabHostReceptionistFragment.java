@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.app.league.goldenboys.leagueapp.Customer.Fragments.CustomerLeagueFragment;
+import com.app.league.goldenboys.leagueapp.Customer.Fragments.UserNotificationsFragment;
 import com.app.league.goldenboys.leagueapp.Fragments.NewsFeedFragment;
 import com.app.league.goldenboys.leagueapp.Fragments.NotificationsFragment;
 import com.app.league.goldenboys.leagueapp.Fragments.ProfileFragment;
@@ -49,9 +51,10 @@ public class TabHostReceptionistFragment extends Fragment {
     private void setupViewPager(ViewPager viewPager) {
 
         Adapter adapter = new Adapter(getChildFragmentManager());
-//        adapter.addFragment(new NewsFeedFragment(), "News Feed");
-//        adapter.addFragment(new ProfileFragment(), "Profile");
-//        adapter.addFragment(new NotificationsFragment(), "Notification");
+        adapter.addFragment(new NewsFeedFragment(), "News Feed");
+        //adapter.addFragment(new CustomerLeagueFragment(), "Leagues");
+        adapter.addFragment(new ReservationFragment(), "Walk-in Reservation");
+        //adapter.addFragment(new NotificationsFragment(), "Notification");
         viewPager.setAdapter(adapter);
     }
 

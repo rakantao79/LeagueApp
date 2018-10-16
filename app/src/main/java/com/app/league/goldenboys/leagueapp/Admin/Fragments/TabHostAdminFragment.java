@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.app.league.goldenboys.leagueapp.Fragments.NewsFeedFragment;
 import com.app.league.goldenboys.leagueapp.Fragments.NotificationsFragment;
 import com.app.league.goldenboys.leagueapp.R;
+import com.app.league.goldenboys.leagueapp.Receptionist.Fragments.ReservationFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,6 @@ public class TabHostAdminFragment extends Fragment {
     public TabHostAdminFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,7 +49,8 @@ public class TabHostAdminFragment extends Fragment {
         Adapter adapter = new Adapter(getChildFragmentManager());
         adapter.addFragment(new AdminNewsFeedFragment(), "News Feed");
         //adapter.addFragment(new ProfileFragment(), "Profile");
-        adapter.addFragment(new NotificationsFragment(), "Notification");
+        adapter.addFragment(new ReservationFragment(), "Reservation List");
+        adapter.addFragment(new AdminNotificationsFragment(), "Notification");
         viewPager.setAdapter(adapter);
 
     }

@@ -12,8 +12,6 @@
 
     <ProgressBar
         android:id="@+id/progressBarNewsFeed"
-        android:indeterminate="true"
-        android:indeterminateBehavior="repeat"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -26,16 +24,22 @@
 
         <TextView
             android:textColor="@color/primaryTextColor"
-            android:layout_marginTop="10dp"
             android:text="Add News Feed"
             android:textAlignment="center"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <ImageView
+            android:id="@+id/imgAddNewsImage"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_default"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
         <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -63,23 +67,34 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <Button
-            android:id="@+id/btnAddNewsFeed"
-            android:textColor="@color/primaryTextColor"
-            android:layout_marginTop="16dp"
-            android:text="Post News Feed"
-            android:background="@drawable/btn_background"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnAddNewsCancel"
-            android:textColor="@color/primaryTextColor"
-            android:layout_marginTop="8dp"
-            android:text="Cancel"
-            android:background="@drawable/btn_background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <Button
+                android:layout_weight="1"
+                android:layout_marginRight="4dp"
+                android:id="@+id/btnAddNewsFeed"
+                android:textColor="@color/primaryTextColor"
+                android:text="Post News Feed"
+                android:background="@drawable/btn_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/btnAddNewsCancel"
+                android:textColor="@color/primaryTextColor"
+                android:text="Cancel"
+                android:background="@drawable/btn_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 

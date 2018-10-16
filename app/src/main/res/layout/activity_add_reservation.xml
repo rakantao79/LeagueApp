@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Receptionist.Activity.AddReservationActivity">
+
+    <include
+        android:id="@+id/toolbar_add_reservation"
+        layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Reservation"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etRCName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etRCDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/etRCTimeStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Time Start"
+            android:inputType="time" />
+
+        <EditText
+            android:id="@+id/etRCTimeEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Time End"
+            android:inputType="time" />
+
+        <Button
+            android:id="@+id/btnRCSaveSched"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_background"
+            android:text="Save"
+            android:textColor="@color/primaryTextColor" />
+
+        <Button
+            android:id="@+id/btnRCCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_background"
+            android:text="Cancel"
+            android:textColor="@color/primaryTextColor" />
+
+    </LinearLayout>
+
+</LinearLayout>

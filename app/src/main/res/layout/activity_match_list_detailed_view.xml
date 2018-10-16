@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Organizer.Activities.MatchListDetailedViewActivity">
+
+    <include
+        android:id="@+id/toolbar_matchlistdetailedview"
+        layout="@layout/toolbar_layout" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvDetailViewMatchName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match Name" />
+
+            <TextView
+                android:id="@+id/tvDetailViewMatchSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Match Schedule" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tvDetailViewMatchTeamAName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Team A"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailViewMatchTeamBName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Team B"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etDetailViewMatchOpponentScoreA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Score"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/etDetailViewMatchOpponentScoreB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Score"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Winner: "
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailViewMatchWinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Winner : "
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnUpdateMatchScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_background"
+                android:text="Update Score"
+                android:textColor="@color/primaryTextColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Player of the game : "
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailViewMatchPlayerOfTheGame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Player of the game "
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etPlayerPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Points"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/etPlayerRebounds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Rebounds"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/etPlayerAssist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Assist"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etPlayerSteal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Steal"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/etPlayerBlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Block"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnUpdateMatchDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_background"
+                android:text="Save Match Update"
+                android:textColor="@color/primaryTextColor" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

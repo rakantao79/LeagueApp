@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Organizer.Activities.DetailTeamEntryActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Team Name"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Team Members"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Team MemberA"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberC"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberD"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberA"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberC"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberD"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberA"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberC"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberD"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberJ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberA"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberC"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDetailTeamEntryMemberL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team MemberD"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btnAcceptEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_background"
+                android:text="ACCEPT ENTRY"
+                android:textColor="@color/primaryTextColor" />
+
+            <Button
+                android:id="@+id/btnDeclineEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/btn_background"
+                android:text="DECLINE ENTRY"
+                android:textColor="@color/primaryTextColor" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

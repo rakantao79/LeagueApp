@@ -24,9 +24,36 @@
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Admin.Activities.AdminAddOrganizerActivity" />
-        <activity android:name=".Organizer.Activities.CreateLeagueActivity" />
-        <activity android:name=".Admin.Activities.AddNewsActivity"></activity>
+        <activity
+            android:name=".Admin.Activities.AdminAddOrganizerActivity"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".Organizer.Activities.CreateLeagueActivity"
+            android:parentActivityName=".NavigationActivity" />
+        <activity
+            android:name=".Admin.Activities.AddNewsActivity"
+            android:parentActivityName=".NavigationActivity" />
+        <activity android:name=".Organizer.Activities.LeagueDetailActivity" />
+        <activity android:name=".OtherModule.UploadImageActivity" />
+        <activity android:name=".Organizer.Activities.SubmitEntryActivity" />
+        <activity android:name=".Organizer.Activities.PendingEntryActivity" />
+        <activity android:name=".Organizer.Activities.DetailTeamEntryActivity" />
+        <activity android:name=".Organizer.Activities.ApprovedEntryActivity" />
+        <activity android:name=".Organizer.Activities.MatchMakerActivity" />
+        <activity android:name=".Organizer.Activities.ListOfCategoryEntryActivity" />
+        <activity android:name=".Organizer.Activities.OraganizerModulesActivity" />
+        <activity android:name=".Receptionist.Activity.AddReservationActivity" />
+        <activity android:name=".Organizer.Activities.OrganizerMatchMakerActivity" />
+        <activity android:name=".Organizer.Activities.OrganizerMatchOverviewActivity" />
+        <activity android:name=".Customer.Activities.UserNotificationDetailActivity" />
+        <activity android:name=".Organizer.Activities.MatchListActivity" />
+        <activity android:name=".Organizer.Activities.MatchListDetailedViewActivity" />
+        <activity android:name=".Organizer.Activities.FourTeamRoundRobinActivity" />
+        <activity android:name=".Organizer.Activities.RoundRobinScheduleActivity" />
+        <activity android:name=".Organizer.Activities.RoundRobinMatchListActivity" />
+        <activity android:name=".Organizer.Activities.RoundRobinMatchDetailActivity" />
+        <activity android:name=".OtherModule.SelectItemsActivity" />
+        <activity android:name=".Organizer.Activities.OrganizerNotificationDetailedActivity"></activity>
     </application>
 
 </manifest>

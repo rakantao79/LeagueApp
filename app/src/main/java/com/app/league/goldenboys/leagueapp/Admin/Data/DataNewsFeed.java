@@ -2,48 +2,49 @@ package com.app.league.goldenboys.leagueapp.Admin.Data;
 
 public class DataNewsFeed {
 
-    private String title;
-    private String content;
-    private String pushkey;
+    private String newstitle;
+    private String newscontent;
+    private String pushKey;
     private String datePosted;
     private String user_id;
-    private String counter;
-
+    private String imageUrl;
+    private Long counter;
 
     public DataNewsFeed() {
     }
 
-    public DataNewsFeed(String title, String content, String pushkey, String datePosted, String user_id, String counter) {
-        this.title = title;
-        this.content = content;
-        this.pushkey = pushkey;
+    public DataNewsFeed(String newstitle, String newscontent, String pushKey, String datePosted, String user_id, String imageUrl, Long counter) {
+        this.newstitle = newstitle;
+        this.newscontent = newscontent;
+        this.pushKey = pushKey;
         this.datePosted = datePosted;
         this.user_id = user_id;
+        this.imageUrl = imageUrl;
         this.counter = counter;
     }
 
-    public String getTitle() {
-        return title;
+    public String getNewstitle() {
+        return newstitle;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setNewstitle(String newstitle) {
+        this.newstitle = newstitle;
     }
 
-    public String getContent() {
-        return content;
+    public String getNewscontent() {
+        return newscontent;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setNewscontent(String newscontent) {
+        this.newscontent = newscontent;
     }
 
-    public String getPushkey() {
-        return pushkey;
+    public String getPushKey() {
+        return pushKey;
     }
 
-    public void setPushkey(String pushkey) {
-        this.pushkey = pushkey;
+    public void setPushKey(String pushKey) {
+        this.pushKey = pushKey;
     }
 
     public String getDatePosted() {
@@ -62,11 +63,19 @@ public class DataNewsFeed {
         this.user_id = user_id;
     }
 
-    public String getCounter() {
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public Long getCounter() {
         return counter;
     }
 
-    public void setCounter(String counter) {
+    public void setCounter(Long counter) {
         this.counter = counter;
     }
 }

@@ -4,30 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:orientation="vertical"
     tools:context=".Organizer.Activities.CreateLeagueActivity">
 
-    <TextView
-        android:text="Create League"
-        android:textAlignment="center"
-        android:textSize="20dp"
+    <include
+        android:id="@+id/toolbar_createleague"
+        layout="@layout/toolbar_layout" />
+
+    <ProgressBar
+        android:id="@+id/pbProgressBarCreateLeague"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <EditText
-        android:hint="League Title"
-        android:id="@+id/etLeageTitle"
-        android:textAlignment="center"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal">
 
-    <EditText
-        android:id="@+id/etLeagueSelectDivision"
-        android:textAlignment="center"
-        android:hint="Select Division"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgCreateLeague"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_default" />
+
+
+            <!--<TextView-->
+            <!--android:text="Create League"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textSize="20dp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+            <EditText
+                android:id="@+id/etLeageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="League Title"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/etLeagueDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:textAlignment="center" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Select Division"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <CheckedTextView
+                    android:id="@+id/ctvMedietDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checkMarkTint="@color/primaryTextColor"
+                    android:text="Mediet Division"
+                    android:textColor="@color/primaryTextColor" />
+
+                <CheckedTextView
+                    android:id="@+id/ctvJuniorDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checkMarkTint="@color/primaryTextColor"
+                    android:text="Junior Division"
+                    android:textColor="@color/primaryTextColor" />
+
+                <CheckedTextView
+                    android:id="@+id/ctvSeniorDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checkMarkTint="@color/primaryTextColor"
+                    android:text="Senior Division"
+                    android:textColor="@color/primaryTextColor" />
+
+                <CheckedTextView
+                    android:id="@+id/ctvMasterDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checkMarkTint="@color/primaryTextColor"
+                    android:text="Open Division"
+                    android:textColor="@color/primaryTextColor" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCreateLeague"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_background"
+                android:text="Create"
+                android:textColor="@color/primaryTextColor" />
+
+            <Button
+                android:id="@+id/btnCreateLeagueCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_background"
+                android:text="Cancel"
+                android:textColor="@color/primaryTextColor" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

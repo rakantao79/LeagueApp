@@ -409,6 +409,27 @@
                 android:background="@drawable/btn_background"
                 android:text="Submit Team Entry"
                 android:textColor="@color/primaryTextColor" />
+
+            <!--<Button-->
+                <!--android:id="@+id/btnListOfPendingEntriesForLeagueTitleDivision"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/btn_background"-->
+                <!--android:text="LIST OF PENDING entries"-->
+                <!--android:textColor="@color/primaryTextColor" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btnListOfApprovedEntriesForLeagueTitleDivision"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/btn_background"-->
+                <!--android:text="List of approved entries"-->
+                <!--android:textColor="@color/primaryTextColor" />-->
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
